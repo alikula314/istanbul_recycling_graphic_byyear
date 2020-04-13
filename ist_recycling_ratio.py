@@ -13,11 +13,12 @@ from matplotlib import rc
 # In[2]:
 
 
-gd=pd.read_excel('atik.xlsx', 'Geri Kazanım Verisi', index_col="Geri Kazanım Verisi", columns=['Yıllar'], na_values=['NA'])
+gd=pd.read_excel('ist_geri_kazanim_verisi.xlsx', 'Geri Kazanım Verisi', index_col="Geri Kazanım Verisi", columns=['Yıllar'], na_values=['NA'])
 gd
 
 
 # Bir çöp gazı yakma tesisinde ortalama net elektrik eldesi : 1.100 kWh /ton atık'dır.
+#Kaynak: ÜNAL Enver, "Katı Atıktan Enerji Üretimi", HITACHI ZOSEN INOVA AG Hardturmstrasse 127, P.O.Box 680,CH-8037 Zurich, http://www.emo.org.tr/ekler/9d577b8f7ee7662_ek.pdf
 
 # In[3]:
 
@@ -32,8 +33,10 @@ gd1 = gd.rename(index={'Çöp Gazından Üretilen Elektrik Enerjisi Miktarları 
 gd1
 
 
-# Atıktan yakıt türetme tesisine gelen 300 ton
-# atıktan 81 ton plastik bazlı yakıt elde edilebilmektedir. 
+# Atıktan yakıt türetme tesisine gelen 300 ton atıktan ortalama 81 ton plastik bazlı yakıt elde edilebilmektedir. 
+#Kaynak1: İSTAÇ Stratejik Planı (2013-2017), İstanbul Çevre Yönetimi San. Ve Tic. A.Ş., http://istac.ssplab.com/contents/15/%C4%B0stac_Str_Plan%202(2).pdf. Erişim Tarihi: 28.10.2018.
+#Kaynak2: ÇELİK Suna Özden, "Atıktan Türetilmiş Yakıt: Yasal Çerçeve, Avrupa’daki ve Türkiye’deki Durum", https://dergipark.org.tr/en/download/article-file/613105
+
 
 # In[5]:
 
@@ -51,8 +54,7 @@ gd2.round(1)
 # In[7]:
 
 
-ea=pd.read_csv('evsel_atik.txt',sep="-")
-print(ea)
+ea=pd.read_csv('ist_evsel_atik_toplam.txt',sep="-")
 
 # In[8]:
 
@@ -145,7 +147,7 @@ plt.xticks(x_pos,x_labels);
 plt.xlabel("Yıllar")
 plt.ylabel("% Atık Miktarı")
 
-plt.legend(["Düzensiz Biriktirilen Atık Miktarı","Çöp Gazından Elektrik Üretiminde Kullanılan Atık Miktarı",
+plt.legend(["Depolanan Atık Miktarı","Çöp Gazından Elektrik Üretiminde Kullanılan Atık Miktarı",
            "Yakıt Üretmek İçin Kullanılan Atık Miktarı",
            "Geri Dönüşebilir Malzeme Miktarı",
          "Üretilen Kompost Miktarı"])
