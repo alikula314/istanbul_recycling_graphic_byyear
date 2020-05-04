@@ -1,7 +1,7 @@
 # istanbul_recycling_ratio_byyear
 ENG-This study shows the recycling rates from household waste in Istanbul city, on a yearly basis.
 You can find the two resources I use for the study below.
-TR-Bu çalışma İstanbul'da evsel atıklardan geri dönüşüm oranlarını yıl bazında göstermektedir. 
+TR-Bu çalışma İstanbul'da evsel atıklardan geri dönüşüm oranlarını yıl bazında göstermektedir. "ist_geri_donusum.png" adresine tıklayarak çalışma sonucu oluşan grafiğe erişebilirsiniz.
 Çalışma için kullandığım iki kaynağa aşağıdan ulaşabilirsiniz.
 
 Resources:
